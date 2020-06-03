@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>CSS</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		/*@import url("style.css");*/
+		@import "style.css";
+		/*우선순위 때문에 class명령어가 출력*/
+		/*ul{color:red;}*/
+		#nav{color:white;}
+		.menu{color:black;}
+
+		/*>는 바로 아래 태그_자식 / 띄어쓰기는 just 아래_후손*/
+		#nav1>li{color:green;}
+        /*ul#nav1>li{color:green;}
+		ul#nav1 li{color:green;}*/
+		ul#nav1 a{color:violet;}
+
+		/*!!우선순위!! * < tag name < class name < id name < inline style < !important*/
+
+	</style>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consequuntur quis, dolorum voluptates libero voluptatem officia dolores eaque eum et fugiat excepturi ad voluptatum sit sed sapiente nobis. Placeat, odio!</p>
+	<p>Libero numquam eum consectetur deleniti cum necessitatibus soluta excepturi ex nisi perferendis laboriosam harum, quisquam quibusdam magni, voluptas hic dolores aliquam incidunt. Consectetur, magnam, libero rerum et modi excepturi recusandae!</p>
+	<p style="color:blue;">Minima, assumenda aut in esse eos accusantium doloribus dignissimos laudantium qui aliquid, natus laborum sint ducimus architecto fugiat optio cupiditate perspiciatis facilis autem repellat numquam molestias! Perspiciatis odio, et nobis!</p>
+	<p style="color:skyblue;font-size:30px;">Veritatis expedita, inventore provident ipsa temporibus nostrum, excepturi ea magnam, eos officiis explicabo, doloribus mollitia deserunt. Ducimus, explicabo laboriosam enim, iste praesentium blanditiis sequi, error omnis iure est facilis. Vel?</p>
+
+	<!-- ul#nav>li.menu*5>{menu} -->
+	<ul id="nav">
+		<li class="menu" style="color:red;">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+	</ul>
+
+	<ul id="nav1">
+		<li><a href="#">menu</a></li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+	</ul>
+
+	<header id="header">
+		<h1>logo</h1>
+		<nav id="nav">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</nav>
+	</header>
+</body>	
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>MENU</title>
+	<style>
+		/*reset*/
+		*{margin:0px;padding:0px;}
+		a:visited,a:link{
+						 color: #333;
+						 text-decoration: none; /*밑줄 제거*/
+						}
+		li{list-style: none;} /* · 없애기 */
+		body{background-color: #eee;}
+
+		/*nav*/
+		#nav{width: 1000px;height: 50px;
+			 background-color: #aaa; /*_bgc+Tab*/
+			 /*margin:10px; _m10+Tab*/
+			 /*margin-top: 10px; _mt10+Tab*/
+			 /*margin-right: 10px; _mr10+Tab*/
+			 /*margin-bottom: 10px; _mb10+Tab*/
+			 /*margin-left: 10px; _ml10+Tab*/
+			 margin: 20px auto; /*너비 가운데 정렬*/
+			}
+		#nav>ul>li{
+				   /*float: right; -> 오른쪽 정렬-오른쪽부터 1,2,3...순서로 감 _fr+Tab*/
+				   float:left; /* list 옆으로 붙이기 (왼쪽정렬!!).. 블록단위 요소 없애기 (빈 공간 채우기) _fl+Tab*/
+				   width:200px; /*좌우너비 200px씩 _w200+Tab*/
+				   height:50px; /*상하높이 50px씩 _h50+Tab*/
+				   background-color: #0ff;
+				  } 
+		#nav>ul>li>a{
+					 display:block;
+					 line-height:50px; /*lh50+Tab*/
+					 text-align: center; /*tac+Tab*/
+					 }			
+		#nav>ul>li:hover{background-color:skyblue;}
+		#nav>ul>li>a:hover{color: #fff;}
+		/*#nav>ul>li>a:hover{
+						   background-color: mistyrose;
+						   color: gray;
+						  }*/
+
+
+	</style>
+</head>
+<body>
+	<nav id="nav">
+		<!-- ul>li*5>a[#]>{menu$} -->
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+		
+	</nav>
+</body>
+</html>

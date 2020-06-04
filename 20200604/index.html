@@ -7,13 +7,23 @@
 	<style>
 		/*h3{color:yellowgreen;}*/
 		/*h3,li{color:yellowgreen;}*/
-		.main{background-color:beige;
 			  /*background-image:url(../images/strawberry.png);*/
-			 }
+
+		*{padding:0px;margin:10px;}
+		a:visited,/*{color:#000;}*/
+		a:link{color: #000;text-decoration:none;}
+		/*a{text-decoration:none;}*/
+
+		
+		.main{background-color:beige;}
 		.warning{color:darkgreen;}
 		#list{background-color:mistyrose;}
 		#list>li{color:gray;}
-		#list>li.active{color: #F00;}
+		#list>li.active{color: #0F0;}
+		div>strong{background-color:white;}
+		ul>li>strong{background-color: #000;}
+		#list>li:hover{background-color: #ddd;}
+		/*#list>li:active{background-color: #0F0;}*/
 	</style>
 </head>
 <body class="main">
@@ -22,8 +32,12 @@
 	<div>
 		<div>Lorem <strong>ipsum</strong> dolor.</div>
 		<ul id="list">
-			<li class="active">html</li>
-			<li><strong>css</strong></li>
+			<li class="active">
+				<a href="http://www.naver.com">NAVER</a>
+			</li>
+			<li>
+				<a href="http://www.daum.net">DAUM</a>
+			</li>
 			<li>java</li>
 		</ul>
 		<div class="warning">Lorem ipsum dolor sit.</div>

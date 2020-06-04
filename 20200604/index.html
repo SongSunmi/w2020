@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>SELECTOR</title>
+	<style>
+		/*h3{color:yellowgreen;}*/
+		/*h3,li{color:yellowgreen;}*/
+		.main{background-color:beige;
+			  /*background-image:url(../images/strawberry.png);*/
+			 }
+		.warning{color:darkgreen;}
+		#list{background-color:mistyrose;}
+		#list>li{color:gray;}
+		#list>li.active{color: #F00;}
+	</style>
+</head>
+<body class="main">
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem <strong>ipsum</strong> dolor.</div>
+		<ul id="list">
+			<li class="active">html</li>
+			<li><strong>css</strong></li>
+			<li>java</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit.</div>
+	</div>
+
+</body>
+</html>

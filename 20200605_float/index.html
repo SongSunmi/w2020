@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{padding: 0px;margin: 0px;}
+		body{background-image: url(../images/bg_grid.gif);}
+		.wrap{ 
+			  background-color: yellowgreen; 
+			  width: 200px;
+			 }
+		/*div.wrap>div*/.box1{
+						 /* width: 100px; height: 100px; 
+						  background-color: #ff0; */
+						  float: left;
+						 }
+		.box2{
+			  /*width: 100px; height: 100px; 
+			  background-color: #0ff;*/ 
+			  float: left;
+	  		 }
+		/*.clear{clear: both;}*/
+		.test{width: 100px;height: 100px;background-color: skyblue;}
+		.after{width: 200px;height: 200px;background-color: mistyrose;}
+			/*after_문서 맨 뒤에 실행(출력)_인라인 요소*/
+		.after:after{content: "HELLO";}
+			/*before_문서 맨 앞에 출력*/
+		.after:before{content: "LUNMI";}
+
+					/*wrap 문서가 끝난 뒤 (display block) 블록단위 요소로 만들어줌 */
+		.wrap:after{content: "";display: block;clear: both;}
+
+
+		/*.testImg {width: 200px;height: 200px; float: left;}
+*/
+	</style>
+</head>
+<body>
+	<!-- div.wrap -->
+	<div class="wrap">
+		<!-- div#box$*2>{box$} -->
+		<div class ="box1">box1</div>
+		<div class ="box2">box2</div>
+		<!-- <div class ="clear">clear</div> -->
+	</div>
+	<div class="test"></div>
+
+	<div class="after">
+		center
+	</div>
+
+<!--     <img src="../images/testimg.jpg" alt="에펠탑" class="testImg">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita doloremque ratione recusandae laborum et nisi dolore inventore magni soluta dicta omnis cupiditate, repudiandae, labore dolor laboriosam, animi dolores incidunt qui.
+	<div>DIV test</div>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolore, repudiandae ad, quaerat recusandae nam temporibus quae rem, officia accusantium unde blanditiis vitae quasi impedit quo. Accusantium amet, architecto a!
+	<p>안녕하세요</p>
+ -->
+
+
+			
+
+</body>
+</html>

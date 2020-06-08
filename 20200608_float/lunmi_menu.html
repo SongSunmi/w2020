@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Lunmi Menu</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link, a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+
+		/*MENU*/
+		nav.navWrap{width: 1000px;
+					background-color: mistyrose;
+					margin: 0 auto; margin-bottom: 10px;margin-top: 10px;}
+		nav.navWrap>ul:after{content:""; display: block;clear: both;}
+		nav.navWrap>ul>li{float: left; width: 20%; }
+		nav.navWrap>ul>li>a{display: block; text-align: center; line-height: 60px;}
+		nav.navWrap>ul>li>a:hover{background-color: yellowgreen; color:gray;}
+
+		div.visualWrap{height: 300px;background-color: beige;}
+		
+		
+
+	</style>
+</head>
+<body>
+	<nav class="navWrap">
+		<ul>
+			<li><a href="#">L</a></li>
+			<li><a href="#">U</a></li>
+			<li><a href="#">N</a></li>
+			<li><a href="#">M</a></li>
+			<li><a href="#">I</a></li>
+		</ul>
+	</nav>
+	<div class="visualWrap">
+		<center><img src="lee.jpg" width="300"></center>
+	</div>
+	
+</body>
+</html>

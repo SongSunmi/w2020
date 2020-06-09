@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box model</title>
+	<style>
+		/*reset */
+		*{margin: 0;padding: 0;}
+		a:link, a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+
+		body{background-image: url(../images/bg_grid.gif);}
+		div.box{width: 200px;height: 200px;
+				background-color: lightgray;
+				/*margin-top: 10px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				margin-left: 10px;*/
+				margin: 10px;
+				padding: 10px;
+				/*border-color: #000;
+				border-width: 10px;
+				border-style: solid;*/
+
+				/*border-top: 10px solid #000; 따로따로 넣어줄 수도 있음*/
+
+				border:10px solid #000;
+				box-sizing: border-box; /*margin빼고 여백/테두리 박스 안으로(inside)*/
+			   }
+	</style>
+</head>
+<body>
+	<div class="box">test</div>
+	
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position MENU</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content: "";display: block;clear: both;}
+
+
+		/*position으로 위치이동*/
+		header.hdWrap{
+					  width: 1200px; height: 45px;margin: 0px auto;
+					  background-color: #D9E5FF;
+					  position: relative;
+					  margin-bottom: 10px;
+					 }
+		header.hdWrap>h1{
+						 width: 100px;background-color: #B2CCFF;
+						 line-height: 45px;
+						 }
+		nav.gnb{
+				width: 800px;background-color: #D4F4FA;
+				position: absolute;right: 0px;top: 0px;
+				}
+		/*nav.gnb>ul:after{content:"";display: block;clear: both;}*/
+		nav.gnb>ul>li{float: left;width: 20%;}
+		nav.gnb>ul>li>a{display: block;text-align: center;line-height: 45px;}
+
+
+
+		/*flaot로 위치이동*/
+		header.hdWrap1{
+					   width: 1200px;background-color: #E4F7BA;
+					   margin: 0 auto;
+					  }
+		header.hdWrap1>h1{
+						  width: 100px;background-color: #CEF279;
+						  float: left;
+						 }
+		nav.gnb1{
+				 width: 800px;background-color: #CEFBC9;
+				 line-height: 45px;
+				 float: right;
+				}
+		nav.gnb1>ul>li{float: left;width: 20%;}
+		nav.gnb1>ul>li>a{
+						 display: block;
+						 text-align: center;
+						 line-height: 45px;
+						}
+
+		div.visual{height: 300px;background-color: #FAE0D4;}
+		section.content{
+						width: 1200px;height: 300px;
+						margin: 0 auto;
+						text-align: center;
+						padding: 20px;
+					   }
+		section.content>h3:after{
+								 content:"";display: block;
+								 width: 120px;height: 2px;
+								 background-color: #4C4C4C;
+								 margin: 10px auto;
+								}
+
+	</style>
+</head>
+<body>
+	<header class="hdWrap"> <!-- header태크: w1200px로 잡기 -->
+		<h1><a href="#">LOGO</a></h1>
+		<nav class="gnb">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</header>
+	<header class="hdWrap1 clearfix"> 
+		<h1><a href="#">LOGO</a></h1>
+		<nav class="gnb1">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="visual"></div>
+	<section class="content">
+		<h3>information</h3>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</section>
+	
+</body>
+</html>

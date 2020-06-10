@@ -31,11 +31,32 @@
 					padding: 20px;
 				   }
 
+		nav.nav{width: 980px;margin: 0 auto;}
+		nav.nav>ul:after{content:"";display: block;clear: both;}
+		nav.nav>ul>li{float: left;	
+					  width: 100px;	  
+					  text-align: center;
+					 }
+		nav.nav>ul>li>a{
+						 color: #fff;
+						 height: 30px;
+					     line-height: 30px;
+						}
+		nav.nav>ul>li:first-child{border-right: 1px solid #eee;}
+
 
 	</style>
 </head>
 <body>
-	<div class="visualWrap"></div>
+	
+	<div class="visualWrap">
+		<nav class="nav">
+			<ul>
+				<li><a href="#">프롤로그</a></li>
+				<li><a href="#">블로그</a></li>
+			</ul>
+		</nav>
+	</div>
 	<div class="menu">
 		<ul class="card">
 			<li>

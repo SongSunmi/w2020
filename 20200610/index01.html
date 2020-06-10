@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position01</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+
+		body{background-image: url(../images/bg_grid.gif);}
+
+		div.box1,div.box2,div.box3,div.box4,div.box5,div.box6{width: 100px;height: 100px;}
+		div.box1{
+				 background-color: mistyrose;
+				}
+		div.box2{
+				 background-color: #E3C4FF;
+				 position: absolute;top: 0px;
+				 left:50%; margin-left: -50px; /*left50%에 -박스크기/2*/
+				}
+		div.box3{
+				 background-color: #B2CCFF;
+				 position: absolute;right: 0px;top: 0px; 
+				}
+		div.box4{
+				 background-color: #E4F7BA;
+				 position: absolute;bottom: 0px; 
+				}
+		div.box5{
+				 background-color: #FFC19E;
+				 position: absolute;bottom:0px;
+				 left:200px;
+				}
+		div.box6{
+				 background-color: #FFB2D9;
+				 position: absolute;right: 0px;bottom: 0px; 
+				}
+
+		div.boxWrap{
+					width: 500px;height: 300px;
+					background-color: #FAECC5;
+					margin: 0 auto;
+					position: relative; /*이거 꼭!!넣어야 박스위치가 제대로 됨.가둬놓음*/
+					}
+
+		div.fixed{
+				  background-color: #D4F4FA;
+				  position: fixed;
+				  width: 100%;height: 70px;
+				  bottom:0px; /*아래에 고정!!.width값을 꼭 넣어주어야 함*/
+				 }
+
+	</style>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+		<div class="box4">box4</div>
+		<div class="box5">box5</div>
+		<div class="box6">box6</div>
+	</div>
+	<div class="fixed">fixed</div>
+	
+
+</body>
+</html>

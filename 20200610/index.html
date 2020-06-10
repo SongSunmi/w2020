@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+
+		body{background-image: url(../images/bg_grid.gif);}
+
+		div.box1,div.box2,div.box3{width: 100px;height: 100px;}
+		div.box1{
+				 background-color: mistyrose;
+				 /*position: relative;*/	
+				 				/*position:relative;를 설정한 후 위치조정을 하면 지정된 레이어만 움직인다_top.bottom을 주로 사용*/
+				 /*top:20px;	*/		/*margin을 사용해 위치를 조정하면 다같이 움직임*/
+				 /*position: absolute;*/	/*부모자를 기준으로 자유롭게 위치이동 가능*/
+				 position: relative;	
+				 left: 10px; top:20px; 
+				 z-index: 2; /*layer의 순서*/
+				}
+		div.box2{
+				 background-color: #E3C4FF;
+				 position: absolute;
+				 left:40px;top:40px;
+				 z-index: 1;
+				}
+		div.box3{background-color: #B2CCFF;}
+	</style>
+</head>
+<body>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+	
+
+</body>
+</html>

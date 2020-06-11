@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>LunMi slider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true,mode:"fade"});
+		});
+	</script>
+	
+	<style>
+		div.hTop{
+				 width: 980px;height: 75px;
+				 /*background-color: lightgray;*/
+				 margin: 0 auto;
+				 position: relative;
+				}
+		div.hTop>h1.logo{
+						 text-align: center;
+						 line-height: 75px;
+						}
+		div.hTop>div.toggle{
+			width: 50px;height: 50px;
+			border:1px solid #ddd;
+			position: absolute;right: 0;top: 13px;
+			cursor: pointer;
+		}
+		div.hTop div.box1,
+		div.hTop div.box2,
+		div.hTop div.box3{
+			width: 20px;height: 3px;
+			background-color: #aaa;
+			position: absolute;
+			border-radius: 5px;
+		}
+		div.hTop div.box1{top: 15px;left: 15px;}
+		div.hTop div.box2{top: 23px;left: 15px;}
+		div.hTop div.box3{top: 31px;left: 15px;}
+
+		nav.gnbWrap{width: 1200px;height: 45px;
+					/*background-color: #FFF2E6;*/
+					margin: 10px auto;
+					border-top: 2px solid #FFF2E6;
+					border-bottom: 2px solid #FFF2E6;
+					/*margin-bottom: 10px;*/
+					}
+		nav.gnbWrap>ul:after{content:"";display: block;clear: both;}
+		nav.gnbWrap>ul>li{float: left; width: 20%;}
+		nav.gnbWrap>ul>li>a{display: block; text-align: center; height: 45px;line-height: 45px;}
+		nav.gnbWrap>ul>li>a:hover{background-color: #FFF2E6; color:gray;}
+
+		div.visual{width: 1200px;margin: 0 auto;}
+		ul.slider>li>img{width: 1000px;margin: 0 auto;}
+		.bx-wrapper{
+				    -moz-box-shadow: 0 none;
+				    -webkit-box-shadow: 0 none;
+				    box-shadow: none;
+				    border: 0 none;
+				    background: #fff;
+				    margin-bottom: 0;
+					}
+		.bx-wrapper .bx-pager{bottom:30px;}
+		.bx-wrapper .bx-pager.bx-default-pager a.active{
+			background: #FFE08C;}
+	</style>
+
+</head>
+<body>
+	<div class="hTop">
+		<h1 class="logo"><a href="#">CANDY SHOP</a></h1>
+		<div class="toggle">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+		</div>
+	</div>
+	<nav class="gnbWrap">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</nav>
+
+	<div class="visual">	
+		<ul class="slider">
+			<li><img src="img/candy01.jpg" alt="img01"></li>
+			<li><img src="img/candy02.jpg" alt="img02"></li>
+			<li><img src="img/candy03.jpg" alt="img03"></li>
+		</ul>
+	</div>
+
+	
+</body>
+</html>

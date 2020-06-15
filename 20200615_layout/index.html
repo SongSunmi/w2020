@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../bxslider/css/jquery.bxslider.css">
+	<script src="../bxslider/js/jquery-3.1.1.min.js"></script>
+	<script src="../bxslider/js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				auto:true
+			});
+		});
+	</script>
+
+	<style>
+		body{background-image: url(../images/bg_grid.gif);}
+		.boxWrap{width: 410px;_height: 200px; background-color: #D4F4FA;}
+		.boxWrap .box1,
+		.boxWrap .box2{
+			width: 200px;height: 200px;color: #747474;
+			float: left;  
+		}
+		.boxWrap .box1{background-color: #E8D9FF;}
+		.boxWrap .box2{background-color: #FAECC5;}
+		.box3{height: 200px;background-color: #FFD9EC;}
+		/*.boxWrap .clear{height: 10px;clear: both;}*/
+		/*.boxWrap:after{content:"";display: block;clear: both;}*/
+
+		.clearfix:after{content:"";display: block;clear: both;}
+
+		.box3:after{content:" 입니다."; display: block;}
+		.box3:before{content:"핑크는 ";display: block;}
+
+		.ygreen{background-color: #E4F7BA;}
+		.pink{background-color: #FFD9EC;}
+		.skyblue{background-color: #D4F4FA;}
+		.yellow{background-color: #FAECC5;}
+
+		
+
+		
+		
+	</style>
+</head>
+<body>
+	<div class="boxWrap clearfix">
+		<div class="box1">BOX1</div>
+		<div class="box2">BOX2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+	<div class="box3">BOX3</div>
+
+
+	<style>
+		.wrap1{width: 1000px;margin: 10px auto; background-color: #FFBB00;}
+		.wrap1 .left,
+		.wrap1 .right{width: 100px;height: 100px;}
+		.wrap1 .left{float: left;}
+		.wrap1 .right{float: right;}
+	</style>
+	<br><br><br><br><br>
+	<h3>1. float</h3>
+	<div class="wrap1 ygreen clearfix">
+		<div class="left skyblue">left</div>
+		<div class="right pink">right</div>
+	</div>
+
+
+	<style>
+		.wrap2{width: 1000px;margin: 0 auto;}
+		.wrap2 li{float:left; width: 20%;}
+		.wrap2 li>a{
+			display: block;
+			text-align: center;
+			line-height: 30px;
+		}
+		.wrap2 li>a:hover{background-color: #ABF200; color: #fff;}
+	</style>
+	<br><br><br><br><br>
+	<h3>2. float nav</h3>
+	<div class="wrap2 ygreen">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+
+
+	<style>
+		.wrap3{width: 1000px;margin: 0 auto;}
+		.wrap3 h1{text-align: center;}
+		.wrap3 .pad{padding: 10px;}
+		.wrap3 li{float: left;width: 20%;}
+		.wrap3 li>a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+			height: 40px;
+		}
+		.wrap3 li>a:hover{background-color: #6799FF ; color:#fff;}
+	</style>
+	<br><br><br><br><br>
+	<h3>3. header</h3>
+	<div class="wrap3 yellow">
+		<h1>LOGO</h1>
+		<div class="pad">
+			<ul class="clearfix skyblue">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<style>
+		.wrap4{width: 1000px;margin: 0 auto;}
+		.wrap4 h1{text-align: center; }
+		.wrap4 .pad{padding:10px; margin-bottom: 5px;}
+		.wrap4 ul>li{float: left; width: 20%; }
+		.wrap4 ul>li>a{
+			display: block;
+			text-align: center;
+			line-height:40px;
+			height: 40px;
+		}
+		.wrap4 li>a:hover{background-color: #F29661; color: #fff;}
+		.wrap4 img{width: 900px;margin: 0 auto;}
+
+		.wrap4 .AC{width: 1000px;margin: 0 auto; padding: 10px; background-color: #FFBB00;}
+		.wrap4 .aside{
+			width: 380px;height: 400px;
+			float: left;
+			text-align: center;
+			line-height: 400px;
+		}
+		.wrap4 .content{
+			width: 580px;height: 400px;
+			float: right;
+			text-align: center;
+			line-height: 400px;
+		}
+
+		.wrap4 .footer{
+			width: 1000px; height: 150px;
+			margin: 0 auto; background-color: #747474;
+			color:#fff;
+			text-align: center;
+			line-height: 150px;
+		}
+	</style>
+	<br><br><br><br><br>
+	<h3>4. float mainpage layout</h3>
+	<div class="wrap4 pink">
+		<h1>LOGO</h1>
+		<div class="pad">
+			<ul class="clearfix yellow">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</div>
+
+		<ul class="slider">
+			<li>
+				<img src="../bxslider/img/candy01.jpg" alt="img01">
+			</li>
+			<li>
+				<img src="../bxslider/img/candy02.jpg" alt="img02">
+			</li>
+			<li>
+				<img src="../bxslider/img/candy03.jpg" alt="img03">
+			</li>
+		</ul>
+
+		<div class="AC clearfix">
+			<div class="aside ygreen">
+				<h4>ASIDE</h4>
+			</div>
+			<div class="content skyblue">
+				<h4>CONTENT</h4>
+			</div>
+		</div>
+
+		<div class="footer">
+			<h4>FOOTER</h4>
+		</div>
+	</div>
+
+	
+</body>
+</html>

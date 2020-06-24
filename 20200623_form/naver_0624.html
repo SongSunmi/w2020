@@ -3,48 +3,51 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>NAVER FORM</title>
+	<title>NAVER 연습</title>
 	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_0624.css">
 
 </head>
 <body>
 	<div id="wrap">
-		<header id="header">
-			<h1><a href="#">NAVER</a></h1>
-		</header>
+		<div id="header">
+			<h1><a href="#">CANDY</a></h1>
+		</div>
 		<div id="container">
 			<div id="content">
-				<div class="join">	
+				<div class="join">
 					<form action="#" method="get">
 						<fieldset>
-							<legend>ID, PASSWORD</legend>
 							<div class="field">
+								<legend>회원가입</legend>
 								<label for="user-id" class="blind">ID</label>
-								<input type="text" id="user-id" name="userid" class="inp-field" placeholder="아이디 입력" required>
+								<input type="text" id="user-id" name="userid"
+								class="inp-field" placeholder="ID 입력" required>
 								<span class="icon mail">@naver.com</span>
 							</div>
-
 							<div class="field">
+								<legend>비밀번호</legend>
 								<label for="user-pass" class="blind">PASSWORD</label>
-								<input type="password" id="user-pass" name="userpass" class="inp-field" placeholder="비밀번호" required>
+								<input type="password" id="user-pass" name="userpass"
+								class="inp-field" placeholder="PASSWORD" required>
 								<span class="icon pass">password</span>
 							</div>
-
 							<div class="field">
+								<legend>비밀번호 확인</legend>
 								<label for="user-pass2" class="blind">PASSWORD 확인</label>
-								<input type="password" id="user-pass2" name="userpass2" class="inp-field" placeholder="비밀번호 확인" required>
+								<input type="password" id="user-pass2" name="userpass2"
+								class="inp-field" placeholder="PASSWORD 확인" required>
 								<span class="icon pass2">password two</span>
 							</div>
 						</fieldset>
 
-						<div class="btn-area">
-							<input type="submit" value="가입하기" class="btn-submit">
+						<div class="btn">
+							<input type="submit" value="JOIN" class="btn-submit">
 						</div>
 					</form>
-				</div>	<!-- join -->
-			</div>	<!-- #content -->
-		</div>	<!-- container -->
+				</div> <!-- join -->
+			</div> <!-- content -->
+		</div> <!-- container -->
 	</div>
 	
 </body>

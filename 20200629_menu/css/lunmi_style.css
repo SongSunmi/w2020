@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body{font-family: 'Open Sans', sans-serif;}
+
+
+nav.gnb{width: 1200px;margin: 0 auto;position: relative;z-index: 1;}
+nav.gnb>ul>li{float: left;width: 25%;background: #9FC93C;}
+nav.gnb>ul>li>a{display: block;text-align: center;line-height: 40px;color:#fff;}
+.smenu{display: none;}
+nav.gnb>ul>li:hover{background: #7DAB12;}
+nav.gnb>ul>li:hover .smenu{display: block;}
+
+.smenu{position: absolute;background: #9FC93C;}
+.smenu li{width: 300px;padding-left: 40px;}
+.smenu a{display: block;color:#fff;line-height: 30px;}
+.smenu li:hover{background: #7DAB12;}
+
+.visual{height: 640px;background: #F2CB61;position: relative;}

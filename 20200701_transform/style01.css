@@ -26,7 +26,7 @@
 
 .contents01{width: 1200px;margin: 0 auto;padding: 100px 0;}
 .contents01>ul{}
-.contents01>ul>li{float: left;width: 228px;margin-right: 15px;_overflow: hidden;position: relative;}
+.contents01>ul>li{float: left;width: 228px;margin-right: 15px;overflow: hidden;position: relative;}
 .contents01>ul>li:last-child{margin-right: 0;}
 .contents01>ul>li>img{width: 100%;transition: 0.3s;}
 .contents01>ul>li>div.bg{
@@ -51,4 +51,30 @@
 .contents01>ul>li>div.bg.top{left: 0;top: 100%;}
 .contents01>ul>li>div.bg.bottom{left: 0;bottom: 100%;}
 .contents01>ul>li>div.bg.center{left: 50%;top: 50%;transform:translate(-50%,-50%) scale(0);}
+
+
+
+
+
+
+/*----------BUTTON------------*/
+.btn{width: 200px;height: 40px;position: relative;}
+.btn>a{display: block;text-align: center;line-height: 40px;}
+.btn>.bar{
+	position: absolute;width: 0;height: 5px;background: #FFC19E;
+	bottom: 0;transition: 0.3s;}
+.btn:hover .bar{width: 100%;}
+.bright{right: 0;}
+
+.btn01{width: 200px;height: 40px;position: relative;}
+.btn01>a{display: block;line-height: 40px;text-align: center;}
+.btn01>.bar01,
+.btn01>.bar02{
+	position: absolute;height: 5px;width: 100%;
+	background: #B2CCFF;transform: scaleX(0);transition: 0.3s;
+}
+.btn01>.bar01{bottom: 0;}
+.btn01>.bar02{top: 0;}
+.btn01:hover .bar01{transform: scaleX(1);}
+.btn01:hover .bar02{transform: scaleX(1);}
 

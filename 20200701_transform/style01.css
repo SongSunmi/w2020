@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.bgcolorOne{background: #ddd;}
+.bgcolorTwo{background: #FFD8D8;}
+
+.contents{width: 1200px;margin: 0 auto;padding: 100px 0;}
+.contents>ul{}
+.contents>ul>li{float: left;width: 228px;margin-right: 15px;overflow: hidden;position: relative;}
+.contents>ul>li:last-child{margin-right: 0;}
+.contents>ul>li>img{width: 100%;}
+.contents>ul>li>div.bg{
+	width: 100%;height: 100%;background: rgba(0,0,0,0.3);
+	position: absolute;top: 100%;left: 0;transition: 0.6s;
+}
+.contents>ul>li>div.bg>h3{
+	width: 50px;text-align: center;color: #fff;
+	position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);
+}
+.contents>ul>li:hover div.bg{top: 0;left: 0;}
+.contents>ul>li:hover img{transform: scale(1.2);}
+
+
+
+
+
+
+.contents01{width: 1200px;margin: 0 auto;padding: 100px 0;}
+.contents01>ul{}
+.contents01>ul>li{float: left;width: 228px;margin-right: 15px;_overflow: hidden;position: relative;}
+.contents01>ul>li:last-child{margin-right: 0;}
+.contents01>ul>li>img{width: 100%;transition: 0.3s;}
+.contents01>ul>li>div.bg{
+	width: 100%;height: 100%;background: rgba(0,0,0,0.3);
+	position: absolute;/*left: 100%;top: 0;*/transition: 0.6s;
+}
+.contents01>ul>li>div.bg>h3{
+	width: 50px;text-align: center;color: #fff;line-height: 40px; 
+	position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);
+}
+/*.contents01>ul>li:hover div.bg{left: 0;top: 0;}*/
+.contents01>ul>li:hover img{transform: scale(1.2) rotate(5deg);}
+
+.contents01>ul>li:hover div.bg.left{left: 0;top: 0;}
+.contents01>ul>li:hover div.bg.right{right: 0;top: 0;}
+.contents01>ul>li:hover div.bg.top{left: 0;top: 0;}
+.contents01>ul>li:hover div.bg.bottom{left: 0;bottom: 0;}
+.contents01>ul>li:hover div.bg.center{left: 50%;top: 50%;transform: translate(-50%,-50%) scale(1);}
+
+.contents01>ul>li>div.bg.left{left: 100%;top: 0;}
+.contents01>ul>li>div.bg.right{right: 100%;top: 0;}
+.contents01>ul>li>div.bg.top{left: 0;top: 100%;}
+.contents01>ul>li>div.bg.bottom{left: 0;bottom: 100%;}
+.contents01>ul>li>div.bg.center{left: 50%;top: 50%;transform:translate(-50%,-50%) scale(0);}
+

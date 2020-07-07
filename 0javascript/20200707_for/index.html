@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>FOR</title>
+	<script>
+		var num;
+		var st ="ABCDEFG";
+		document.write("<div>st 개수는"+st.length+"</div>");
+		document.write("<div>")
+		for(num=1;num<=10;num++){
+			// document.write(num);
+			document.write("<div class='box'>"+num+"</div>");
+		}
+		document.write("</div>")
+		document.write("<div>")
+		for(num=1;num<=st.length;num++){
+			// document.write(num);
+			document.write("<div class='box'>"+num+"</div>");	
+		}
+		document.write("</div>")
+
+		// 구구단
+		// document.write("<div>")
+		// var x;
+		// for(x=1;x<10;x++){
+		// 	document.write("2 x "+x+" = "+(2*x)+"<br>")
+		// }
+		// document.write("</div><br>")
+
+		// document.write("<div>")
+		// var x;
+		// for(x=1;x<10;x++){
+		// 	document.write("3 x "+x+" = "+(3*x)+"<br>")
+		// }
+		// document.write("</div>")
+	</script>
+	<style>
+		.box{width: 100px;height: 100px;display: inline-block;}
+		.box:nth-child(2n){background: #afb;}
+	</style>
+</head>
+<body>
+	<div>
+		<script>
+			document.write("<div>");
+			var x;
+			for(x=1;x<10;x++){
+				document.write("2 x "+x+" = "+(2*x)+"<br>");
+			}
+			document.write("</div><br>");
+
+			document.write("<div>");
+			var x;
+			for(x=1;x<10;x++){
+				document.write("3 x "+x+" = "+(3*x)+"<br>");
+			}
+			document.write("</div><br>");
+		</script>
+	</div>
+	<div>
+		<script>
+			var x,y;
+			for(x=2;x<10;x++){
+				document.write("<div style='display:inline-block;width: 150px;'>");
+				document.write(x+"단 입니다.<br>");
+				for(y=1;y<10;y++){
+					document.write(x+" x "+y+" = "+(x*y)+"<br>");
+				}
+				document.write("</div>");
+			}
+		</script>
+	</div>
+	<script>
+		var sum=0;
+		for(var i=1;i<=5;i++){
+			// sum = sum+i;
+			sum+=i;
+		}
+		document.write(sum+"<br>");
+
+
+		var sum=0;
+		var x=1;
+		while(x<=5){
+			sum+=x;
+			x++;
+		}
+		document.write(sum+"<br>");
+
+
+		var sum=0;
+		var x=1;
+		while(1){
+			sum+=x;
+			x++;
+			if(x==101){break;}
+		}
+		document.write(sum+"<br>");
+
+	</script>
+
+	<script>
+		var sum=0;
+		for(var i=1;i<=10;i++){
+			document.write(i);
+			if(i!=10){
+				document.write("+");
+			}
+			else{
+				document.write("=");
+			}
+			sum+=i;
+		}
+		document.write(sum+"<br>");
+	</script>
+	
+</body>
+</html>

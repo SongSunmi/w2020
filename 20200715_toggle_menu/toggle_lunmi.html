@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>MEDIA TOGGLE</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#Toggle").click(function(){
+				var toggle = $(this).attr("class");
+				if(toggle == "toggleMenu"){
+					$(this).addClass("change");
+					$(".menu").stop().animate({left:0},300);
+				}
+				else{
+					$(this).removeClass("change");
+					$(".menu").stop().animate({left:"-100%"},300);
+				}
+
+				// var Menu = $(".menu").attr("class");
+				// if (Menu == "menu") {
+				// 	$(".menu").addClass("top");
+				// }
+				// else{
+				// 	$(".menu").removeClass("top");
+				// }
+			});
+		});
+		$(document).ready(function(){
+			$(".icon").click(function(){
+				var topClass = $("#myTopMenu").attr("class");
+				//alert(topClass);
+				if(topClass == "topNav clearfix"){
+					$("#myTopMenu").addClass("responsive");
+				}
+				else{
+					$("#myTopMenu").removeClass("responsive");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="menu">
+		<div class="txt">
+			<a href="#">HOME</a><br>
+			<a href="#"><i class="fas fa-headphones-alt"></i> NEWS</a><br>
+			<a href="#"><i class="fas fa-home"></i> CONTACT</a><br>
+			<a href="#"><i class="fas fa-umbrella"></i> PROJECT</a>
+		</div>
+	</div>
+	<div class="menuWrap">
+		<nav id="myTopMenu" class="topNav clearfix">
+			<a href="#">HOME</a>
+			<a href="#"><i class="fas fa-headphones-alt"></i> NEWS</a>
+			<a href="#"><i class="fas fa-home"></i> CONTACT</a>
+			<a href="#"><i class="fas fa-umbrella"></i> PROJECT</a>
+			<a href="#" class="icon">
+				<div id="Toggle" class="toggleMenu">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</a>
+		</nav>
+	</div>
+	
+	<div class="content">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem molestiae unde aspernatur id, ratione distinctio, neque, repellat debitis vero reprehenderit aliquid, corrupti vitae placeat recusandae totam tenetur hic iste. Quia tempore ab perspiciatis magnam nobis eos quod earum similique commodi adipisci, dolore dolores consectetur velit, sed necessitatibus. Laborum dicta, quia iure consequuntur architecto voluptatem facere error voluptas! Ullam, quasi obcaecati nesciunt, eum ab dignissimos pariatur ipsum voluptates! Voluptas corporis libero blanditiis, cupiditate, asperiores dignissimos perspiciatis vel quaerat voluptatem numquam nam repellendus, earum quam accusantium maiores animi voluptatibus enim. Explicabo sequi labore natus deserunt sed illum commodi temporibus blanditiis aliquam veniam ullam consectetur laboriosam, eligendi cumque dolorem sint maiores reiciendis ut hic reprehenderit quisquam. Odit nobis, veniam sunt cupiditate! Animi soluta modi repudiandae iure labore odit perspiciatis, repellendus nemo, nulla, dicta fuga at cum numquam tempora voluptatem porro, ab obcaecati ea. Voluptatibus quia culpa facilis voluptates eligendi temporibus perferendis nobis, dolorum. Et eius pariatur ea excepturi, laudantium reiciendis, optio quo sunt sint fugit enim molestiae quis deleniti rem harum iste corrupti unde, recusandae error earum perspiciatis. Nesciunt libero quasi sit maxime ea assumenda ex odio illum aliquid, quas, voluptate provident perspiciatis expedita, quisquam reprehenderit? Deleniti nam consectetur sapiente sint non velit enim et quia dolores doloremque fugit quo dolore facilis, voluptates eum iste. Tempore saepe cumque debitis atque modi molestias officiis sunt blanditiis labore nesciunt dolorem accusamus repellat quia omnis placeat aperiam, aspernatur distinctio iusto consectetur, delectus laboriosam at culpa qui. Officiis atque suscipit cum voluptas minima ipsam, explicabo dolore vero, quos ullam dolor ab cupiditate consequuntur est, delectus saepe enim non modi. Dicta sit iusto perferendis id enim consequatur aut ad suscipit dolorem delectus quisquam, repudiandae molestias quam sequi voluptas neque optio et excepturi nostrum commodi? Voluptate, obcaecati, nesciunt. Impedit suscipit molestias porro ratione inventore, sint velit totam aliquid laboriosam.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui labore cupiditate ea debitis doloribus quam nesciunt. Mollitia odit obcaecati, numquam ipsum porro voluptatem repellat! Natus maxime hic aliquam eos harum dolore, voluptatibus facere voluptates corporis perspiciatis deserunt tenetur mollitia obcaecati impedit assumenda numquam quidem, expedita rem velit. Ad sint ipsum error, hic eius id eligendi porro distinctio beatae. Maxime magni explicabo labore impedit magnam, temporibus numquam repellat veniam provident ut veritatis similique quasi iste suscipit quae mollitia amet cum nisi laudantium. Harum eius rerum laboriosam quae praesentium hic illo reprehenderit, velit accusamus vero deleniti, pariatur ad repellendus repellat facere explicabo. Nesciunt quae ex non libero sapiente neque at excepturi voluptates perspiciatis, mollitia ducimus distinctio, molestiae totam odit, nisi est cupiditate autem? Quisquam consequatur aperiam hic fugiat harum, earum quibusdam itaque dicta iure rem perspiciatis ut illum labore ipsam, explicabo voluptates amet molestias consectetur alias iste necessitatibus culpa. Laboriosam molestias, rerum. Animi recusandae quidem atque ea voluptas, quibusdam autem eum ex cupiditate adipisci ipsam, libero unde saepe corporis aut reiciendis accusamus, similique dolorem vero vel debitis doloremque. Repellat hic recusandae, beatae quia maxime quibusdam iusto libero porro magnam. Fuga laboriosam, nam temporibus delectus itaque esse iure qui illum, blanditiis laudantium dolorem soluta accusantium a nisi nostrum, possimus amet tempora. Vero tempore mollitia optio voluptas quos iste atque cum neque voluptatum ab. Atque reprehenderit dolores soluta sequi sint doloribus porro at natus. Enim minus reprehenderit incidunt adipisci possimus, soluta impedit. Labore, pariatur veniam eos nam provident aliquid excepturi tempore similique voluptatibus voluptatem earum at, dolores cupiditate obcaecati impedit explicabo placeat, praesentium expedita corporis atque? Modi natus soluta excepturi enim dolorem non dolorum corporis vero officiis quas. Provident eius pariatur ad iure illo rerum. Consequatur quis, quisquam sapiente blanditiis libero consectetur, non enim aliquid excepturi incidunt id? Possimus eligendi optio dolorum impedit earum molestiae excepturi dolorem et quaerat, a numquam distinctio magnam doloribus ad cupiditate reprehenderit quia suscipit soluta officiis. Similique voluptatem et incidunt architecto sed iusto unde. Eos eum facilis eaque maiores perspiciatis aliquid quia culpa? Excepturi ipsa ratione, laborum alias unde, facilis mollitia distinctio vero. Quis hic sint, esse consequuntur voluptas! Similique natus repudiandae suscipit non adipisci quas ad optio? Nesciunt a sapiente aperiam earum dolores, similique pariatur quas, voluptatibus animi eveniet obcaecati expedita sit. Officia consectetur, repellat est nam amet a sint ipsa incidunt rerum eveniet esse numquam modi. Itaque ipsa rerum temporibus fugiat, maiores enim facilis earum harum, inventore, molestiae optio quam ex deleniti sed, omnis minima eum. Aut, corporis, earum porro impedit aperiam ea temporibus odit illum. Dolorum, quod. Deserunt et facilis quos molestiae. Iure saepe eum cum. Deserunt animi obcaecati nesciunt quidem quis rerum, facilis, in dignissimos praesentium blanditiis vitae magnam quisquam accusantium tempora, earum iure tempore soluta! Dolorem minima sapiente culpa nisi velit. Ducimus amet repudiandae maiores deleniti facilis ipsam quia nemo, earum enim praesentium! Sed id dolorem dignissimos minus magni voluptatibus ut, sint eum quo. A et, explicabo amet pariatur non tempora cum deserunt ratione perspiciatis minima adipisci sunt animi illum! Voluptates temporibus, explicabo excepturi!
+	</div>
+	
+</body>
+</html>

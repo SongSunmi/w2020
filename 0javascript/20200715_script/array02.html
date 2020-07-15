@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">		
+	<title>array02</title>	
+</head>
+<body>
+	<script>
+		var com = [95,88,,72,68,,99,82,78,85];
+
+		function printAvg(){
+			var sum = 0;
+			for(var i=0;i<com.length;i++){
+				if(com[i]==undefined){
+					continue;
+				}
+				else{
+					sum += com[i];
+				}
+			}
+			return (sum/com.length);
+		}
+		var getAvg = printAvg();
+		document.write(getAvg);
+
+	</script>
+	
+</body>
+</html>

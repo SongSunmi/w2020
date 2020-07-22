@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>쪽지 시험</title>
+</head>
+<body>
+	<script>
+		document.write("송선미")
+	</script>
+	<p id="song">나는 송선미</p>
+	<button onclick="alertBTN()">버튼1</button>
+	<button onclick="resetBTN()">버튼2</button>
+    <script>
+
+   	  var sun=document.getElementById("song");
+       function alertBTN(){
+       	 sun.style.color="red";
+      	 sun.style.backgrou nd="gray"
+         alert("색이 바뀐쟈!");
+      }
+      function resetBTN(){
+      	sun.style.color="black";
+      	sun.style.background="white"
+      }
+      alert("안녕하세요!\n   저는 '송선미'입니다.");
+   </script>
+	
+</body>
+</html>

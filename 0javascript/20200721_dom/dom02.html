@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom02</title>
+</head>
+<body>
+	Lorem ipsum dolor sit <span class="text">amet</span>, consectetur adipisicing <span>elit</span>. Facilis minus voluptas mollitia veritatis, nam <span class="text">dignissimos</span> esse molestiae pariatur <span>laudantium</span> blanditiis?
+	<div onclick="change()">TAG변경</div>
+	<div onclick="cChange()">CLASS변경</div>
+	<script>
+		function change(){
+			var span=document.getElementsByTagName("span");
+			console.log(span.length);
+			// span[0].style.color="orange";
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="orange";
+				span[i].style.fontWeight="bold";
+			}
+		}
+		function cChange(){
+			var span=document.getElementsByClassName("text");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="orchid";
+				span[i].style.fontWeight="bold";
+			}
+		}
+
+	</script>
+
+	
+	
+</body>
+</html>

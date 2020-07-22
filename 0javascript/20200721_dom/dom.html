@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom_document object model</title>
+</head>
+<body>
+	<p id="myP" style="color:blue">이것은 
+		<span id="mySpan" style="color:orange">문장 입니다</span>
+	</p>
+	<script>
+		var p=document.getElementById("myP");
+	</script>
+
+	<script>
+		function change(){
+			p.style.color="green";
+		}
+		function reset(){
+			p.style.color="blue"
+			p.style.fontSize="1em";
+			p.style.border="none";
+		}
+		function inChange(){
+			var p=document.getElementById("myP");
+			p.innerHTML = "나의 <img src='../../images/testimg.jpg'> 여행지";
+		}
+		function reChange(){
+			var p=document.getElementById("myP");
+			p.innerHTML = "이것은 <span id='mySpan' style='color:orange'>문장 입니다</span>";
+		}
+	</script>
+
+	<button type="button" onclick="change()">색상변경</button>
+	<a href="#" onclick="reset()">초기값</a>
+	<div onclick="inChange()">내용변경</div>
+	<div onclick="reChange()">내용초기</div>
+	
+	<button onclick="this.style.background='skyblue'">버튼</button>
+	<button onclick="bChange(this,'30px','yellowgreen')">버튼</button>
+	<button onclick="bChange(this,'40px','red')">버튼1</button>
+	<div onclick="bChange(this,'50px','blue')">변경</div>
+	<script>
+		function bChange(obj,size,color){
+			obj.style.color=color;
+			obj.style.fontSize=size;
+		}
+	</script>
+
+
+	<button onclick="changez(this,'red','gray')">버튼1</button>
+	<button onclick="changez(this,'black','white')">버튼1</button>
+	<script>
+		function changez(obj,color,background){
+			obj.style.color=color;
+			obj.style.background=background;
+			alert("색이 바뀌었습니다.");
+		}
+	</script>
+
+	<br><br><br><br><br><br><br>
+
+</body>
+</html>

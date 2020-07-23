@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom03</title>
+	<script>
+		function change(){
+			var span=document.getElementsByTagName("span");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="skyblue";
+				span[i].style.fontSize="2em";
+				span[i].style.fontWeigth="800";
+				// document.getElementsByTagName("span")[i].style.color="skyblue";
+			}
+
+		}
+		function reset(){
+			var span=document.getElementsByTagName("span");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="black";
+				span[i].style.fontSize="1em";
+				span[i].style.fontWeigth="400";
+				// document.getElementsByTagName("span")[i].style.color="skyblue";
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<h3>
+		내가 좋아하는 과일
+		<br><button type="button" onclick="change()">누르세요</button>
+		<button type="button" onclick="reset()">초기화</button><br>
+		Lorem ipsum dolor sit amet, <span>사과</span> consectetur adipisicing elit.  <span>토마토</span> Corrupti necessitatibus nulla, odit sapiente  <span>복숭아</span> illum facere harum atque nihil cumque facilis ipsa. Mollitia quasi perspiciatis  <span>두리안</span>ipsa vero unde, animi eius amet!
+	</h3>
+</body>
+</html>

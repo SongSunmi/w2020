@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event01</title>
+	<script>
+		var pTag;
+		function init(){
+
+			                 pTag=document.getElementById("newP");
+			pTag.onmouseover=function(){
+				pTag.style.background="orchid";
+			};
+			
+			// pTag.addEventListener("이벤트명",함수명);
+			pTag.addEventListener("mouseout",out);
+		};
+		// pTag.onmouseout=out;
+		function out(){
+			pTag.style.background="white";
+		};
+		
+	</script>
+</head>
+<body onload="init()"> <!-- 문서를 읽고나서 init()실행 -->
+	<p id="newP">마우스를 올리면 색상변경</p>
+
+	
+</body>
+</html>

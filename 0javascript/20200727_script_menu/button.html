@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function change(){
+			var text = document.getElementById("Txt");
+			text.style.color = "red";
+			text.style.background = "gray";
+			alert("안녕하세요.\n \t 저는 '송선미'입니다.")
+			document.getElementsByTagName("body")[0].style.background = "skyblue";
+		}
+		function reset(){
+			var text = document.getElementById("Txt");
+			text.style.color = "initial"; //문서의 기본값
+			text.style.background = "initial";
+			document.getElementsByTagName("body")[0].style.background = "initial";
+		}
+
+
+		// 논리 연산자
+		var x = 12;
+		if (x>10 && x<20){
+			console.log("조건에 맞습니다.");
+		}
+
+		// if문을 switch문으로 변환
+		var level = 1;
+		if (level==1){
+			console.log("수강해야 하는 전공 학점 : 12학점");
+		}
+		else if(level==2){
+			console.log("수강해야 하는 전공 학점 : 18학점");
+		}
+		else if(level==3){
+			console.log("수강해야 하는 전공 학점 : 10학점");
+		}
+		else if(level==4){
+			console.log("수강해야 하는 전공 학점 : 18학점");
+		}
+		var vel=1;
+		switch (vel){
+			case 1:
+				console.log("수강해야 하는 전공 학점 : 12학점");
+				break;
+			case 2:
+				console.log("수강해야 하는 전공 학점 : 18학점");
+				break;
+			case 3:
+				console.log("수강해야 하는 전공 학점 : 10학점");
+				break;
+			case 4:
+				console.log("수강해야 하는 전공 학점 : 18학점");
+				break;
+		}
+	</script>
+</head>
+<body>
+	<p id="Txt">안냥하세요</p>
+	<button type="button" onclick="change()">버튼1</button>
+	<button type="button" onclick="reset()">버튼2</button>
+</body>
+</html>

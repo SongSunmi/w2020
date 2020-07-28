@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>script Menu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		html,body{height: 100%;} /*꼭 선언해야만 view의 높이값 100%를 사용할 수 있음*/
+		/*view*/
+		.view{width: 100%;height: 100%;background: mistyrose;position: relative;left: -100%;transition: 0.3s;}
+		.view h3{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);transition: 0.3s;}
+		/*toggleMenu*/
+		.toggleMenu{
+			width: 30px;height: 30px;border: 1px solid #aaa;border-radius: 5px;
+			position: absolute;right: 20px;top: 8px;z-index: 1;
+			cursor: pointer;
+		}
+		.toggleMenu div{
+			width: 17px;height: 3px;background: #aaa;
+			position: absolute;left:  5.5px;border-radius: 3px;transition: 0.3s;
+		}
+		.toggleMenu div.bar1{top: 6px;}
+		.toggleMenu div.bar2{top: 12px;}
+		.toggleMenu div.bar3{top: 18px;}
+		.change div{transition: 0.3s;}
+		.change div.bar1{left: 50%;top: 50%;transform: translate(-50%,-50%) rotate(45deg);}
+		.change div.bar2{opacity: 0;}
+		.change div.bar3{left: 50%;top: 50%;transform: translate(-50%,-50%) rotate(-45deg);}
+	</style>
+</head>
+<body> <!-- onload="init()" 문서를 읽고나서 init()함수를 실행하라. -->
+	<div class="toggleMenu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<div class="view">
+		<h3>MENU ZONE</h3>
+	</div>
+	<script>
+		var	tMenu = document.querySelectorAll(".toggleMenu"); //class명을 넣는 것
+		var view = document.getElementsByClassName("view"); //class의 이름을 넣는 것
+		// tMenu[0].onclick = function(){ //[0]값을 넣어야 함 (배열의 형태이기 때문에)
+		// 	var toggle = tMenu[0].getAttribute("class"); //지역변수 //attr("class")
+		// 	if(toggle == "toggleMenu"){
+		// 		tMenu[0].setAttribute("class","toggleMenu change"); //tMenu의 class를 "toggleMenu change"로 변경
+		// 		view[0].style.left="0";
+		// 	}
+		// 	else{
+		// 		tMenu[0].setAttribute("class","toggleMenu");
+		// 		view[0].style.left="-100%";
+		// 	}
+		// }
+
+		//tMenu[0].onclick = change; //click event 등록
+		// tMenu[0].addEventListener("이벤트이름",함수이름); //addEventListener method 이벤트
+		tMenu[0].addEventListener("click",change);
+		function change(){
+			var toggle = tMenu[0].getAttribute("class"); //지역변수 //attr("class")
+			if(toggle == "toggleMenu"){
+				tMenu[0].setAttribute("class","toggleMenu change"); //tMenu의 class를 "toggleMenu change"로 변경
+				view[0].style.left="0";
+			}
+			else{
+				tMenu[0].setAttribute("class","toggleMenu");
+				view[0].style.left="-100%";
+			}
+		}
+		
+	</script>
+</body>
+</html>

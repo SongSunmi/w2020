@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>toggleMenu 연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		html,body{height: 100%;}
+		
+		/*view*/
+		.view{width: 100%;height: 100%;background: mistyrose;position: relative;left: -100%;transition: 0.3s;}
+		.view h3{color:#444;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+		/*tMenu*/
+		.tMenu{width: 30px;height: 30px;border-radius: 5px;border: 2px solid #444;position: absolute;right: 20px;top: 8px;z-index: 1;}
+		.tMenu div{width: 16px;height: 2px;border-radius: 1px; background: #444;position: absolute;left: 5px;transition: 0.3s}
+		.tMenu div.bar1{top: 6px;}
+		.tMenu div.bar2{top: 12px;}
+		.tMenu div.bar3{top: 18px;}
+		.change div{transition: 0.3s}
+		.change div.bar1{left: 50%;top: 50%;transform: translate(-50%,-50%) rotate(45deg);}
+		.change div.bar2{opacity: 0;}
+		.change div.bar3{left: 50%;top: 50%;transform: translate(-50%,-50%) rotate(-45deg);}
+	</style>
+</head>
+<body>
+	<div class="tMenu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<div class="view">
+		<h3>MENU ZONE</h3>
+	</div>
+	<script>
+		var tMenu=document.getElementsByClassName("tMenu");
+		var view=document.querySelectorAll(".view");
+		tMenu[0].addEventListener("click",change);
+		function change(){
+			var toggle = tMenu[0].getAttribute("class"); //지역변수 //attr("class")
+			if(toggle == "tMenu"){
+				tMenu[0].setAttribute("class","tMenu change"); //tMenu의 class를 "toggleMenu change"로 변경
+				view[0].style.left="0";
+			}
+			else{
+				tMenu[0].setAttribute("class","tMenu");
+				view[0].style.left="-100%";
+			}
+		}
+
+	</script>
+</body>
+</html>

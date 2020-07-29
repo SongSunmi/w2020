@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.mWrap{width: 1000px;margin: 0 auto;}
+		.mWrap>ul>li{float: left;width: 200px;height: 60px;text-align: center;border: 1px solid #444;line-height: 60px;}
+		.mWrap>ul>li:nth-child(1),
+		.mWrap>ul>li:nth-child(2),
+		.mWrap>ul>li:nth-child(3),
+		.mWrap>ul>li:nth-child(4){border-right: none;}
+		.bWrap{width: 1000px;margin: 0 auto;border: 1px solid #444;padding: 30px;border-top: none;}
+		.bWrap .box2,
+		.bWrap .box3,
+		.bWrap .box4,
+		.bWrap .box5{display: none;}
+		.active{background: #F29661;color:#fff;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".mWrap>ul>li").click(function(){
+				var num = $(this).index();
+				$(".mWrap>ul>li").removeClass();
+				$(this).addClass("active");
+				$(".bWrap>div").hide();
+				$(".bWrap>div").eq(num).fadeIn();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="mWrap">
+		<ul class="clearfix">
+			<li class="active">MENU1</li>
+			<li>MENU2</li>
+			<li>MENU3</li>
+			<li>MENU4</li>
+			<li>MENU5</li>
+		</ul>
+	</div>
+	<div class="bWrap">
+		<div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur molestias, officiis! Architecto omnis numquam in, saepe explicabo molestiae quo quod.</div>
+		<div class="box2">2. Cumque soluta aut eos est atque, sequi. In dolorem delectus ullam dignissimos illum quis labore laudantium voluptatibus incidunt vel? Perspiciatis!</div>
+		<div class="box3">3. Nisi facilis rem maxime labore, ad quaerat eos! A at explicabo nemo molestias eaque, officia maiores illum doloribus ipsum beatae.</div>
+		<div class="box4">4. Possimus aspernatur provident natus, sunt laboriosam doloremque soluta sequi commodi rem ullam voluptates, dolor assumenda nihil esse ea aperiam deserunt?</div>
+		<div class="box5">5. Harum esse, velit eius, cumque commodi magni quia mollitia. Molestiae itaque id excepturi ullam eaque facilis aliquid voluptate sapiente vel?</div>
+	</div>
+	
+</body>
+</html>

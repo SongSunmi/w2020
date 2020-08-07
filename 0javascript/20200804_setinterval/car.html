@@ -25,8 +25,9 @@
 			var objCar = $("#car");
 			var nStart = objBar.position().left;
 			var nEnd = nStart + objBar.width() - objCar.width();
-			var nStep = 2;
+			var nStep = 2; //2px씩 움직임
 			var nCurrent = nStart;
+			var nTimerId = 0;
 
 			function carMove(){
 				// nCurrent = nCurrent + nStep;
@@ -42,15 +43,32 @@
 				objCar.css("left",nCurrent);
 			}
 
-			setInterval(carMove,30);
+			// setInterval(carMove,30);
+			
+			$(".btn_start").click(function(){
+				if(nTimerId == 0){
+				nTimerId = setInterval(carMove,30); 
+				alert("자동차가 움직입니다.")
+				}	 
+			});
+			$(".btn_stop").click(function(){
+				if(nTimerId != 0){
+				clearInterval(nTimerId);
+				nTimerId = 0;
+				}
+			});
 		});
 	</script>
 </head>
 <body>
+	<!-- #panel>.bar+#car>img[car.png] -->
+
 	<div id="panel">
 		<div class="bar"></div>
 		<div id="car"><img src="../../images/car.png" alt=""></div>
 	</div>
+	<button class="btn_start">시작</button>
+	<button class="btn_stop">정지</button>
 	
 </body>
 </html>

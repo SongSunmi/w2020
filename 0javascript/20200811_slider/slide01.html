@@ -15,16 +15,21 @@
 			var banner = $("#wrapper li");
 
 			function banMove(){
-				
-
-				banner.eq(current).css("left","0").animate({left:"-100%"},1000);
+				move(current,"0","-100%");
+				// banner.eq(current).css("left","0").animate({left:"-100%"},400);
 				current++;  //current = current + 1;
 				if(current == 3){current=0;}
-				banner.eq(current).css("left","100%").animate({left:0},1000);
+				move(current,"100%","0");
+				// banner.eq(current).css("left","100%").animate({left:0},400);
 
 			}
+
+			function move(i,start,end){
+				banner.eq(i).css("top",start).animate({top:end},400);
+			}
+
 			//banMove();
-			setInterval(banMove,5000);
+			setInterval(banMove,3000);
 
 		});
 	</script>
@@ -32,8 +37,8 @@
 		img{display: block;width: 500px;}
 		#wrapper{width: 500px;height: 208px;margin: 20px auto;}
 		#wrapper ul{width: 500px;height: 208px;position: relative;overflow: hidden;}
-		#wrapper li{position: absolute;left:100%;}
-		#wrapper li:nth-child(1){left:0;}
+		#wrapper li{position: absolute;top:100%;}
+		#wrapper li:nth-child(1){top:0;}
 	</style>
 </head>
 <body>

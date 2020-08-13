@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sir skin</title>
+	<link rel="stylesheet" href="../css/reset.css">
+
+</head>
+<body>
+	<style>
+		.section{width: 1200px;margin: 0 auto;padding: 0 100px;}
+		.section .sectionTitle{float: left;width: 200px;}
+		.section .sectionTitle h3{font-size: 20px;color: #333;margin-bottom: 10px;}
+		.section .sectionTitle a.moreBtn{
+			display: block;width: 23px;height: 23px;
+			background-image: url(images/more_btn.png);
+			background-repeat: no-repeat;
+			background-position: 0 -23px;
+			text-indent: -9999px;transition: 0.3s;
+		}
+		.section .sectionTitle a.moreBtn:hover{
+			background-position: 0 0;
+		}
+
+		.section .sectionContent{float: left;width: 800px;}
+		.newsList li{
+			float: left;width: 266px;border-right: 1px solid #444;
+			padding: 0 30px;
+		}
+		.newsList li:last-child{border-right: none;} 
+		.newsList h4{
+			font-size: 18px;color: #545454;margin-bottom: 30px;
+			font-weight: initial;
+		} 
+		.newsList .date{color: #979797;font-size: 14px;}
+	</style>
+	<div class="section clearfix">
+		<div class="sectionTitle">
+			<h3><a href="#">NEWS ROOM</a></h3>
+			<a href="#" class="moreBtn">MORE</a>
+		</div>
+		<div class="sectionContent">
+			<ul class="newsList">
+				<li><a href="#">
+						<h4 class="newsTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, fuga!</h4>
+						<span class="date">2020-08-13</span>
+					</a></li>
+				<li><a href="#">
+						<h4 class="newsTitle">Aliquid voluptates aut dolorem ex rem ipsum nisi, temporibus mollitia!</h4>
+						<span class="date">2020-08-13</span>
+					</a></li>
+				<li><a href="#">
+						<h4 class="newsTitle">Hic, ab, alias. Delectus quasi dolore sint quia, maiores reprehenderit.</h4>
+						<span class="date">2020-08-13</span>
+					</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

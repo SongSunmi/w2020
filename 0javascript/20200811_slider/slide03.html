@@ -6,6 +6,7 @@
 	<title>문서 제목</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="../../js/jquery.mousewheel.js"></script>
 	<script>
 
 	// 1. next btn 제작
@@ -21,8 +22,10 @@
 		$(function(){
 			var current = 0;
 			var banner = $("#wrapper li");
+			var pager = $(".pager>span");
 			var i;
 			var overBtn = false;
+
 			function slideNext(){
 				// current++;
 
@@ -41,7 +44,6 @@
 					if(i == -1){i = 2;}
 					slideView("prev");
 				}
-				current = i;
 			}
 			$(".bt_next").click(function(){
 				slideNext();
@@ -53,6 +55,9 @@
 			function slideView(view){
 				var currentEl = banner.eq(current); //현재 배너
 				var nextEl = banner.eq(i); //다음 배너
+
+				pager.removeClass("active").eq(i).addClass("active");
+
 				if(view == "next"){
 					currentEl.css({left:0}).stop().animate({left:"-100%"},1000,function(){overBtn=false;});
 					nextEl.css({left:"100%"}).stop().animate({left:0},1000);
@@ -62,20 +67,42 @@
 					currentEl.css({left:0}).stop().animate({left:"100%"},1000,function(){overBtn=false;});
 					nextEl.css({left:"-100%"}).stop().animate({left:0},1000);
 				}
+				current = i; //최종 현재값
 			}
 
 			function trigger(){
 				$(".bt_next").trigger("click"); //trigger _자동실행
 			}
 			setInterval(trigger,3000);
+
+			pager.click(function(){
+				i = $(this).index();
+				slideView("next");
+			});
+
+			$("#wrapper").mousewheel(function(e){
+				console.log(e.deltaX, e.deltaY, e.deltaFactor);
+					//deltaY _마우스휠(스크롤) 값
+				if(e.deltaY<0){
+					$(".bt_next").trigger("click");
+				}
+				if(e.deltaY>0){
+					$(".bt_prev").trigger("click");
+				}
+			});
 		});
 	</script>
 	<style>
 		img{display: block;width: 500px;}
-		#wrapper{width: 500px;height: 238px;margin: 20px auto;background: mistyrose;}
+		#wrapper{width: 500px;height: 258px;margin: 20px auto;background: mistyrose;}
 		#wrapper ul{width: 500px;height: 208px;position: relative;overflow: hidden;}
 		#wrapper li{position: absolute;left:100%;}
 		#wrapper li:nth-child(1){left:0;}
+		#wrapper .pager span{
+			display: inline-block;width: 20px;height: 20px;background: #fff;border-radius: 10px;
+			cursor: pointer;text-indent: -9999px;
+		}
+		#wrapper .pager span.active{background: #aaa;}
 	</style>
 </head>
 <body>
@@ -88,6 +115,11 @@
 		<div class="btn">
 			<span class="bt_prev">PREV</span>
 			<span class="bt_next">NEXT</span>
+		</div>
+		<div class="pager">
+			<span class="active">1</span>
+			<span>2</span>
+			<span>3</span>
 		</div>
 	</div>
 

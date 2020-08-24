@@ -5,9 +5,11 @@
 	<meta charset="UTF-8">
 	<title>fullpage</title>
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.fullpage.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script>
 		$(function(){
 			$("#fullpage").fullpage({
@@ -35,6 +37,12 @@
 						$("#onViewThree").removeClass("move");
 					}
 				}
+			});
+
+			$(".fullpage_bbs").colorbox({
+				iframe:true,
+				innerWidth:"20%",
+				innerHeight:"80%"
 			});
 		});
 	</script>
@@ -133,7 +141,7 @@
 			<div class="main" id="onViewTwo">
 				<h3 class="f25em">Lorem ipsum.</h3>
 				<p class="f15em mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate ipsa quasi harum. Explicabo!</p>
-				<a href="#">MORE</a>
+				<a href="https://songsunmi.github.io/my_site/07fullpage" class="fullpage_bbs">MORE</a>
 			</div>
 			<div class="scroll">
 				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>

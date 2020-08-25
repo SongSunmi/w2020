@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FLEX</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrapper{
+			width: 100vw;_height: 100vh;
+			background: beige;
+			display: flex;
+			/*align-items: stretch;*/
+			/*align-items: center;*/
+			justify-content: space-between;
+			margin-bottom: 10px;
+		}
+		.wrapper div{width: 100px;height: 100px;}
+		div.box1{background: gray;width: 50px;}
+		div.box2{background: darkgray;}
+		div.box3{background: lightgray;}
+		div.box4{background: mistyrose;}
+		div.box5{background: indigo;}
+
+		.flex{
+			width: 100vw;height: 50vh;
+			background: orange;
+			display: flex;
+		}
+		.flex div{
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.3s;
+		}
+		div.cell1{background: gray;}
+		div.cell2{background: darkgray;}
+		div.cell3{background: lightgray;}
+		div.cell4{background: mistyrose;}
+		div.cell5{background: indigo;}
+
+		.flex div:hover{flex-grow: 3;}
+
+		.divWrap{background: #ddd;padding-top: 20px;}
+		.divWrap>h2{text-align: center;}
+		.container{
+			width: 1000px;margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 0;
+		}
+		.container div{width: 240px;border: 1px solid #444;padding: 20px;}
+		.container div h2{margin-bottom: 10px;}
+		.container div p{font-size: 14px;}
+		
+	</style>
+</head>
+<body>
+	<!-- <div class="wrapper">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+	</div> -->
+	<div class="flex">
+		<div class="cell1">1</div>
+		<div class="cell2">2</div>
+		<div class="cell3">3</div>
+		<div class="cell4">4</div>
+		<div class="cell5">5</div>
+	</div>
+	<div class="divWrap">
+		<h2>TITLE</h2>
+		<div class="container">
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, corporis!</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, corporis!</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, corporis!</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, corporis!</p>
+			</div>
+		</div>
+	</div>
+	<style>
+		.nav{width: 100%;background: beige;}
+		.nav ul{
+			width: 1000px;margin: 0 auto;height: 40px;
+			display: flex;
+		}
+		.nav ul li{flex: 1;text-align: center;background: indigo;}
+		.nav a{display: block;color: #fff;line-height: 40px;}
+	</style>
+	<div class="nav">
+		<ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+			<li><a href="#">MENU6</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

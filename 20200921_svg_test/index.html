@@ -5,11 +5,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ㅅㅅㅁ LOGO</title>
 	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.st0{fill:#6BBDDD;}
+		.st1{fill:#FFE48F;}
+		.ssmLOGO{width: 500px;height: 500px;margin: auto;background: mistyrose;}
+		.ssmLOGO path{
+			stroke: #fff;
+			stroke-width: 5;
+			animation: ssmlogo 1.5s forwards;
+		}
+		@keyframes ssmlogo{
+			from{opacity: 0;}
+			to{opacity: 1;}
+		}
+	</style>
+	<script>
+		$(function(){
+			var pathes = $(".ssmLOGO").find("path");
+			var pathLength = pathes.length;
 
+			for(var i=0;i<pathLength;i++){
+				var path = $(".ssmLOGO path").get(i);
+				var total_length = path.getTotalLength();
+				path.style.strokeDasharray = total_length;
+				path.style.strokeDashoffset = total_length;
+				$(path).animate({"strokeDashoffset":0},2000)
+			}
+		});
+	</script>
 </head>
 <body>
 	<div class="ssmLOGO">
-		
+		<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1000 1000">
+			<path class="st0" d="M138.5,375.9L3.1,609.6c-6.2,13.7-2.1,21.7,13.5,23.4l269.8,0.4c18.1,0.2,22.4-7.9,13.7-23.5l-134.6-234
+				C156.5,363.3,147.5,363.3,138.5,375.9z"/>
+			<path class="st0" d="M505.2,375.1L369.8,608.8c-6.2,13.7-2.1,21.7,13.5,23.4l269.8,0.4c18.1,0.2,22.4-7.9,13.7-23.5l-134.6-234
+				C523.3,362.5,514.3,362.5,505.2,375.1z"/>
+			<path class="st1" d="M977,633.1H756.7c-12.6,0-23-10.4-23-23V389.8c0-12.6,10.4-23,23-23H977c12.7,0,23,10.4,23,23v220.3
+				C1000,622.8,989.7,633.1,977,633.1z"/>
+		</svg>
 	</div>
 	
 </body>
